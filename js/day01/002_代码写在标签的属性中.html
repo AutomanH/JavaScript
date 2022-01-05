@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	 <!-- 可以将JS代码编写到JS标签的属性中 -->
+	 <button>点我一下</button>
+	 <!-- 
+		将JS代码编写到JS标签的onlick属性中去
+			-注意这里的alert（）用单引号因为外面已经有了双引号属于嵌套
+	 -->
+	 <button onclick="alert('讨厌~~')">点我一下会有惊喜</button> 
+	 
+	<!-- 
+	   也可以将JS代码写在超链接的href属性中 
+			-当点击超链接时会执行JS代码（JavaScript：是固定句式）
+	 --> 
+	<a href="JavaScript: alert('让你点,你就点阿')">点我一下</a>   
+	<!-- 
+	    下面这句就是写一个超链接，点击没反应的那种 
+	-->
+	<a href="JavaScript:；)">点我一下</a>  
+	<!-- 
+	   虽然我们的JS代码可以写在JS标签的的属性里，但是这属于结构与行为耦合，不			推荐这么用！！！！
+	 -->
+	</body>
+</html>

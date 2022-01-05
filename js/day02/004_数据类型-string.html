@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			* 1、数据类型指的就是字面量的类型，一共有6种数据类型
+			* 		6种数据类型：
+			* 				String-字符串
+			* 				Number 数值
+			* 				Bool-布尔量
+			* 				Null-对象空值
+			* 				Undefind-为定义
+			* 				Object-对象
+			* 其中前五个为基本数据类型，object属于引用数据类型
+			*/
+		   
+		    /* 
+			*	1、String数据类型
+			* 当字面量为String时，需要用引号引起来,使用双引号或者单引号都可以,但不可混用。
+			* 引号不能嵌套，双引号中不能放双引号，单引号中不能放单引号。但是单引号中可以嵌				套双引号，如果实在要嵌套，得使用\作为转义字符。
+			* 
+			*/
+		   var str = '你在哪里';
+		   console.log(str);
+			
+		   var str1 ='我说:"今天天气真好"';
+		   // 但是单引号中可以嵌套双引号,双引号中也可以嵌												套单引号
+			console.log(str1);
+		   
+			var str2 ="我说:\"今天\n天气\t真好\"";
+			//转义字符\可以将""不做过多解读，表示成字												符串的一个内容
+			// \"表示"   \'表示'  \n表示换行   \t表示制表符（Tab）  \\表示\
+			alert(str2);
+		
+			var str3 = "\\";
+						
+			alert("str3");//输出字面量 字符串str3
+			alert(str3);//输出变量 
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

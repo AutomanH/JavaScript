@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			*1\在JS中所有的数值都是Number类型
+			* 	包括整数和浮点数（小数）。
+			*/
+		   var a = 123;
+			a = 456.789;
+		   console.log(a);
+		   
+		  var b = "123";//字符串123
+		  var c = 123;//数字123
+		 console.log(b);
+		 console.log(c);
+		 //如何区分上面这两个输出呢？输出看上去都是一样的123，真看不出来哪个是字符串，那个是Nunmber
+		/*
+		*  可以使用一个运算符typeof
+		* 			来检查一个变量的类型
+		*		语法:typeof 变量。
+		*  检查字符串时，会返回string
+		* 检查Number类型时，会返回number
+		* 记住：返回的类型都是小写字母！！！
+		*/
+		 console.log(typeof b);
+		 console.log(typeof c);
+		 
+		 console.log(Number.MAX_VALUE);//JS可以表示的数字最大值  1.79769e+308
+		 //那如果JS最大值的平方是啥呢？
+		var d = Number.MAX_VALUE * Number.MAX_VALUE;
+		 console.log(d);//输出为Infinity表示正无穷
+		 
+		 d = -(Number.MAX_VALUE * Number.MAX_VALUE);
+		 console.log(d);//输出为-Infinity表示负无穷
+		 
+		 //注意infinty是一个字面量
+		 d = Infinity;
+		 console.log( typeof d);//输出解果为number
+		 
+		 console.log(Number.MIN_VALUE);//JS可以表示的数字最小值  4.94066e-324，不是负数哦。
+		 
+		 d ="abc" * "def";
+		 console.log(d);//输出的是NaN 是一个特殊字面量   表示 not a number
+		 
+		 d = NaN;
+		 console.log(d);//输出为number
+		 
+		 //下面看下JS的算术
+		 var e =123 + 456;
+		 console.log(e);//输出579 整数运算基本可以保证精确。
+		 e = 0.1 + 0.2;
+		console.log(e);//JS如果进行浮点数会得到一个不准确的结果。
+						//二进制计算是不能精确表示1/10的。
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
