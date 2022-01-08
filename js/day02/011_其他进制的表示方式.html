@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 如果在Js代码中表示16进制数，必须以0x开头。
+			var a =0x10;
+			console.log(a);//以十进制输出
+			//如果在Js代码中表示八进制数，必须以0开头
+			 a = 070;
+			 console.log(a);
+			 //如果在JS代码中表示二进制，必须以0b开头，但不是所有浏览器都支持。
+			 a = 0b10;
+			 console.log(a);
+			 //像"070"这些字符串，转换成number时，有些浏览器会当成八进制来进行转换
+			 a = "070";
+			 console.log(parseInt(a));//应该是70，但是有些浏览器结果是56。
+			 //那如何解决浏览器解析的差异这类问题呢？,可以增加参数解决差异。
+			 a =parseInt(a,8);//10代表的是进制数
+			 console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *一元运算符:只有一个操作数的运算， （+ - * / % 这类属于二元运算符，需要两个操作数参与的）
+			 *   + 正号 :对数字的符号没有任何影响。
+			 *   - 负号:可以对数字的符号进行取反。
+			 *   
+				 * 对于非number的值，进行一元运算时会先转化为number，在进行运算。
+				 * 所以可以通过一元运算符就可以将其他类型的值转化为number类型
+			 */
+			var a = 123;
+			a = + a;
+			console.log(a);
+			
+			a = - a;
+			console.log(a);
+			a = -a;
+			console.log(a);
+			a ="123";
+			
+			a = +a;
+			console.log(a);
+			console.log(typeof a);
+			
+			a = -a ;
+			console.log(a);
+			console.log(typeof a);
+			
+			a =1 + "2" + 3;
+			console.log(+ a);
+			
+			a = 1 + +"2" + 3; // +"2"将字符串"2"变成了number类型的2
+			console.log(a);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

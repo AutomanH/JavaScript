@@ -6,10 +6,13 @@
 		<script type="text/javascript">
 			/*
 			*  将其他类型的数据转换成Number类型
-			* 			转换方法一:调用Number()函数。
-			* 				处理方式-字符串中如果纯数据直接转换成数字，如果含有非数字的字符，则转换为NaN
-			* 
-			*/		
+			*
+		   *转换方法一:调用Number()函数; 
+		   * 		  处理方式-字符串中如果纯数据直接转换成数字，如果含有非数字的字符，则转换为NaN/undifiend
+			*/	
+		
+
+		   //纯数字的
 		   var	a = "123";
 			console.log(typeof a);
 			console.log(a);
@@ -17,15 +20,59 @@
 			console.log(Number(a));
 			console.log(typeof Number(a));
 			
-			
-			var	B ="123";
+			//有非数字的内容
+			var	B = "123a";
 			console.log(Number(B));
+			//空字符串或者全部是空格
+			var C= "";
+			console.log(Number(C));
+
+		    //布尔值
+			var  D = true;
+			console.log(Number(D));
+			
+			var E = false;
+			console.log(Number(E));
+			
+			//Null
+			var F = null;
+			console.log(Number(F));
+			//undefiend
+			var G = undefined;
+			console.log(Number(G));
+			
+			//只要变量有非数字内容，都无法通过Number（）函数转化，如果我想取出下面变量中的'123',需要用到下面的方法
+			var  i ="123px";
+			console.log(Number(i));
+			
+			/*
+			*转换方法二:调用parseInt()函数; 
+			* 		  parseInt（）：将一个字符串转化成整数
+			* 		  parsefloat（）:将一个字符串转化为浮点数
+			*/	
+			i = parseInt(i);//Parseint()函数可以将'123px'字符串中的整数数字部分'123'转化成number类型的123，
+			console.log(typeof i);
+			console.log(i);
 			
 			
+			i = parseInt('p123x');//由于parseint（）函数是从前往后检查是否是数字，一遇到非数字就停止转化后面的部分。
+			console.log(typeof(i));
+			console.log(i);
+		
+			i = parseInt('123.456px');//parseint()只转化前面整数部分。
+			console.log(typeof(i));
+			console.log(i);
+			 
+			i = parseFloat('123.456px');//parsefloat（）函数可以转化前面浮点数部分。
+			console.log(typeof(i));
+			console.log(i);
+			
+			i = parseInt(true);
+			console.log(typeof(i));
+			console.log(i);
 			
 			
-			
-			
+				
 		</script>
 	</head>
 	<body>

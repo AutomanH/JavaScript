@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*运算符也就是操作符，可以对一个值或者多个值进行运算	
+			*    比如： typeof就是一个运算符，获取变量的数据类型。输出字符串
+			*/
+		   var a = 123;
+		   var result = typeof a;
+		   console.log(result);
+		   console.log(typeof result);//说明typeof返回值为string类型
+			/*
+			 * 算数运算符: 并不改变参与运算的值本身，只会返回值。
+			 * 		1、当非Number类型的值参与运算时，它会先将值转换成Number类型然后进行运算。
+			 * 		2、任何值与NaN运算，结果都是NaN。
+			 * 	 + 
+			 * 			1、 两个值相加，并且将结果返回.
+			 * 			2、 字符串和字符串相加，会拼接字符串。
+			 * 			3、任何值和字符串相加，会先转换成字符串，然后拼接字符串
+			 * 	 -	* / 
+			 *        	1、 两个值相减/乘/除，并且将结果返回.
+			 *			2、 除了+运算，其他的和字符串运算都是先将字符串转化为number类型再运算。
+			 * 	%  取模运算(取余数)；
+			 * 		
+			 */
+			result = true + 1;
+			console.log(result);
+			
+			result = false + 1;
+			console.log(result);
+			
+			result = null + 1;
+			 console.log(result);
+			 
+			result = NaN + 1;
+			 console.log(result);
+			 
+			result ="123" + "456";
+			 console.log(result);//拼接成123456；
+			 
+			 
+			result = "锄禾日当午，"+
+					 "汗滴禾下土，"+
+					 "谁知盘中餐，"+
+					 "粒粒皆辛苦"
+			 console.log(result); //注意双引号是无法换行的，写比较长的字符串时可以使用+号，进行多行拼接。不然写的太长不美观。
+			
+			result = 123 + "hello"
+			 console.log(result); //和字符串做加法，都会转换成字符串然后拼接。
+			
+			result =true + "hello"
+			 console.log(result); 
+			
+			var b =123;
+			
+			b =123 + "";
+			 console.log(typeof b);
+			 console.log(b);
+			//我们可以将一个值和空字符串相加，隐性的将值转换成了字符串。
+			
+			var c = 123;
+			console.log("c =" + c); //这个也是常用的。
+
+			var d =1  + 2  + "3" //注意运算从前往后先 1+2 在 3+"3".
+			console.log("d = " + d);
+			
+			d = "1" + 2 + 3;
+			console.log("d = " + d);
+			
+			
+			d = 100 -"1";
+			console.log("d = " + d);
+			//注意除了+运算，其他的和字符串运算都是先将字符串转化为number类型再运算。
+			
+			d =100*"1";
+			console.log("d = " + d);
+			
+			d = 100* undefined;
+			console.log("d = " + d); //结果为NaN
+			
+			d = 100* null;
+			console.log("d = " + d);
+			
+			d =100*NaN;
+			console.log("d = " + d);//任何值与NaN运算，结果都是NaN
+			
+			
+			
+			//利用- / *等运算特点:所有非number类型值进行这三类运算时都先转换为number在运算的特点，
+			//				我们可以通过运算隐性的将字符串转化成number类型。
+			d = "123";
+			
+			d = d - 0;
+			d =d * 1;
+			d =d /1 ;
+			console.log("d = " + d);
+			
+			d  = 9 % 4 ;
+			console.log("d = " + d);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

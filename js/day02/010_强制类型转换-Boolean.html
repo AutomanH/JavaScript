@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			*将其他类型数据转换为Boolean类型
+			* 	使用Boolean（）函数--
+			* 				1、number类型----〉boolean类型时，除了0 和NaN结果为false，其他的结果都是true
+			* 				2、string类型----〉boolean类型时，除了空串结果为false，其他的结果都是true
+			* 				3、null/undefiend----〉boolean类型时，结果都是false；
+			* 				4、对象-----〉boolean类型时，结果都是true
+			*/
+		   var a = 123;
+		   a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+			
+			a = -123;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+			
+			a  =  0;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+			
+			a  =  NaN;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+			
+			a = "123"
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+			
+			a = ""
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);
+				
+			
+			a = undefined;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);	
+			
+			a = null;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);	
+				
+			a = Object;
+			a = Boolean(a);
+			console.log(typeof a);
+			console.log(a);		
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
