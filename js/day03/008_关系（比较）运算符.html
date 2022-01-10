@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*  
+			 * 〉大于    /  〉= 大于或等于 /<小于 /<= 小于或等于
+			 *  -Number类型情况下，通过关系运算符可以进行两个操作数比较。关系成立则返回true，关系不成立则返回false
+			 *  -非Number的情况下，进行比较时会将其转化为数字，然后比较。特殊情况，如果两个操作数都是字符串时，不会转化为数字进行比较而是会比较分别比较字符串中Unicode编码。，参见Unicode编码表（UTF-8）。
+			 *  
+			 */
+			 var result ;
+			 result = 5 > 10;//关系不成立，则result =false；
+			  console.log("result =" + result);
+			 result = 5 >=5 ;
+			  console.log("result =" + result);
+			  
+			 result =  1> true;
+			 console.log("result =" + result);
+			 
+			 result = 1>"0";
+			 console.log("result =" + result);
+			 
+			 result = 10 >NaN ;//任何值和NaN比较，都返回false
+			 console.log("result =" + result);
+			 
+			 result =10 >"hellow"
+			 console.log("result =" + result);
+			 
+			 result ="1" < "5";
+			 console.log("result =" + result);
+			 
+			 result ="11" < "5";
+			 console.log("result =" + result);
+			 
+			 result ="a" >"b"//a的字符编码 小于b的字符编码
+			 console.log("result =" + result);
+			 result ="abc" >"b" //字符编码一位一位进行比较，所以"abc"只会拿 a和b比较
+			 console.log("result =" + result);
+			 result ="abc"> "ab"//前面两位都是ab，所以比较'c'
+			 console.log("result =" + result);
+			 //将这种特性可以用于对英文字母或人名进行字母排序，中文也可以
+			 result ="你" > "我";
+			 console.log("result =" + result);
+			//注意如果比较字符串型的数字，可能会得到不可预见的结果。
+			//所以比较两个字符串型的数字，一定一定一定要转型
+			 result = "12344556" > +"5";  //+号可以将字符串转型为Number类型
+			 
+			 console.log("result =" + result);
+			 
+			 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
