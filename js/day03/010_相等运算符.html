@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *相等运算符：比较两个值是否相等
+			 * 如果相等，会返回true
+			 * 如果不相等，会返回false
+			 * 
+			 * ==表示相等运算符
+			 * 
+			 * 不相等运算符  !=
+			 * 
+			 */
+			console.log(1==1);//true
+			var  a = 10;
+			console.log(a == 4);//false
+			
+			console.log("1" ==1);//true
+			/* 当使用==来比较两个值时，如果两个类型不同，则会隐性进行类型转换，然后再比较*/
+			console.log(true == "1");//true
+		
+			console.log(null == 0);//false
+			/* undefined 衍生自null 所以这两个值相等判断时 会返回true*/
+		   console.log(undefined == null);//true
+		   /* NaN不和任何值相等，包括他本身*/
+		   console.log(NaN == NaN);//false
+			
+			var b =NaN;
+			//判断b的值是否为NaN
+			/* 可以通过isNaN（）函数进行判断
+				如果该值为NaN，就返回true，反之为false*/
+			console.log(isNaN(b));//true。
+			
+			
+			/* !=不相等运算符 */
+			console.log(10 != 5);//true;
+			console.log(10 != 10);//false
+			
+			console.log("1" != 1);//false
+			
+			/* ===  全等，用来判断两个操作数是否全等，该运算符不会对数据类型进隐性转化。数据类型不同就返回false  */
+			console.log("123" === 123);//false
+			console.log(undefined ===null);//false
+			/* !== 不全等，也不会对数据类型隐性转化*/
+			console.log(1 !== "1");//true
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

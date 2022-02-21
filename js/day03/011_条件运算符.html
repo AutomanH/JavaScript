@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*条件运算符也叫三元运算符
+			 *语法如下:条件表达式？语句1:语句2
+			 * 执行的流程如下:1-如果该值为true，执行语句1。并返回执行结果
+							2-如果该值为FALSE，执行语句2。并返回执行结果
+			 */
+			true?alert("语句1"):alert("语句2");
+			var  a =10;
+			var  b =20;
+			var  c =50;
+			
+			a > b ? alert("a大"):alert("b大");
+			
+			//获取a 和 b中 最大值
+			 var max =  a > b ? a : b ;
+			 console.log("max = " + max);
+			//获取a b c中的最大值
+			max = max > c ? max : c;
+			console.log("max ="+ max);
+			
+			var max2 =a > b ?(a > c ? a :c):(b > c ? b : c);
+			console.log("max2 =" + max2);
+			
+			"hello" ? alert("语句1"):alert("语句2");
+			/* 如果条件表达式的的结果，会隐性转化成布尔值（"hello" -----true） */
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		
+		
+			var a , b ,c ;//,运算符可以分割多个语句，同时声明多个变量
+			var a = 1, b =2 ,c=3 ;
+			alert(b);
+			
+			/* js中的运算符优先级
+			*	1、先乘除，后加减
+			* 在JS中有一个运算符优先级的表（见目录文件）
+			*    在表中越靠上优先级越高，优先级越高越优先计算
+			* 	如果优先级一样，则从左往右
+			* 	如果优先级拿不准的，使用（）就行了！！因为（）优先级比较高。
+			 */
+		  var   result;
+		  result =1 || 2 && 3;
+		console.log("result =" + result);
+		/*由表可知: &&比 ||优先级高 */
+		result = (1 || 2) && 3;	
+		console.log("result =" +result);	
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
